@@ -602,7 +602,7 @@ label.error {
 	width:100%;
 	height:100px;
 	background:#fff;
-	z-index:5000;
+	z-index:500;
 	box-shadow:0 0 20px 0 rgba(0,0,0,.3);
 }
 
@@ -1535,12 +1535,12 @@ label.error {
 	width:231px;
 	height:231px;
 	z-index:1;
-	transition:all .5s ease;
+	transition:all .75s ease;
 }
 
 .experts-item:hover .pic {
-  -webkit-transform: rotate3d(0,1,0,180deg) scale(1.1); 
-  transform: rotate3d(0,1,0,180deg) scale(1.1); 
+  -webkit-transform: rotate3d(0,1,0,360deg) scale(1.1); 
+  transform: rotate3d(0,1,0,360deg) scale(1.1); 
 }
 
 .experts-item .pic img {
@@ -1619,12 +1619,12 @@ label.error {
 	width:142px;
 	height:142px;
 	z-index:1;
-	transition:all .5s ease;
+	transition:all .75s ease;
 }
 
 .jury-item:hover .pic {
-  -webkit-transform: rotate3d(0,1,0,180deg) scale(1.1); 
-  transform: rotate3d(0,1,0,180deg) scale(1.1); 
+  -webkit-transform: rotate3d(0,1,0,360deg) scale(1.1); 
+  transform: rotate3d(0,1,0,360deg) scale(1.1); 
 }
 
 .jury-item .pic img {
@@ -2264,13 +2264,13 @@ label.error {
 	width:172px;
 	height:172px;
 	z-index:1;
-	transition:all .5s ease;
+	transition:all .75s ease;
 	margin:0 0 0 -10px;
 }
 
 .help-item:hover .pic {
-  -webkit-transform: rotate3d(0,1,0,180deg) scale(1.1); 
-  transform: rotate3d(0,1,0,180deg) scale(1.1); 
+  -webkit-transform: rotate3d(0,1,0,360deg) scale(1.1); 
+  transform: rotate3d(0,1,0,360deg) scale(1.1); 
 }
 
 .help-item .pic img {
@@ -2436,7 +2436,7 @@ label.error {
 
 .tint {
   position:fixed;
-	z-index:11000;
+	z-index:700;
 	width:100%;
 	height:100%;
 	left:0;
@@ -2448,7 +2448,7 @@ label.error {
   position:absolute;
 	background:#fff;
 	width:800px;
-	z-index:12000;
+	z-index:800;
 }
 
 .popup .close {
