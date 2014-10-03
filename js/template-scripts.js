@@ -24,6 +24,45 @@ $(document).ready(function() {
 	tabbedContent();
 	galleryTabs();
 	
+	// Contacts map
+	
+	function initializeContactsMap() {
+		var mapOptions = {
+			zoom: 16,
+			center: new google.maps.LatLng(55.775876, 37.612067),
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			disableDefaultUI: true,
+			scrollwheel: false
+		}
+		
+		var map = new google.maps.Map(document.getElementById("contactsMap"),
+				mapOptions);
+				
+		var image = 'images/map-pin.png';
+		var myLatLng = new google.maps.LatLng(55.775876, 37.612067);
+		var beachMarker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				icon: image
+		});
+	}
+	
+	var mapInit = 0;
+	
+	$(".tab[rel='contacts-2']").click(function() {
+		if (!mapInit) {
+			initializeContactsMap();
+			mapInit = 1;
+		}
+	})
+	
+	$(".how-link").click(function() {
+		$(".tab[rel='contacts-2']").click();
+		$("html,body").animate({
+			scrollTop: $("a[name='contacts']").offset().top - 90
+		},1000)
+	})
+	
 	$(".fancybox").fancybox({
 		padding: 0,
 		helpers: {
@@ -85,34 +124,61 @@ $(document).ready(function() {
 	
 	// Картинки экспертов при наведении
 	
-	// $(".experts-item").hover(function() {
-		// $(this).find(".pic").transition({
-			// perspective:"500px",
-			// rotateY:"180deg",
-			// scale:1.1
-		// },500)
-	// },function() {
-		// $(this).find(".pic").transition({
-			// perspective:"500px",
-			// rotateY:"0deg",
-			// scale:1
-		// },300)
-	// });
+	$(".experts-item").on("mouseenter",function() {
+		$(this).find(".pic").transition({
+			rotateY:"360deg",
+			scale:1.09
+		},750)
+	});
+	
+	$(".experts-item").on("mouseleave",function() {
+		$(this).find(".pic").transition({
+			rotateY:"0deg",
+			scale:1
+		},500)
+	});
 	
 	// Картинки жюри при наведении
 	
-	// $(".jury-item").mouseenter(function() {
-		// $(this).find(".pic").transition({
-			// perspective:"500px",
-			// rotateY:"180deg"
-		// },500)
-	// });
-	// $(".jury-item").mouseleave(function() {
-		// $(this).find(".pic").transition({
-			// perspective:"500px",
-			// rotateY:"0deg"
-		// },300)
-	// });
+	$(".jury-item").on("mouseenter",function() {
+		$(this).transition({
+			scale:1.2
+		},750);
+		$(this).find(".pic").transition({
+			rotateY:"360deg",
+			scale:1.09
+		},750)
+	});
+	
+	$(".jury-item").on("mouseleave",function() {
+		$(this).transition({
+			scale:1
+		},750);
+		$(this).find(".pic").transition({
+			rotateY:"0deg",
+			scale:1
+		},500)
+	});
+	
+	$(".help-item").on("mouseenter",function() {
+		$(this).transition({
+			scale:1.15
+		},750);
+		$(this).find(".pic").transition({
+			rotateY:"360deg",
+			scale:1.09
+		},750)
+	});
+	
+	$(".help-item").on("mouseleave",function() {
+		$(this).transition({
+			scale:1
+		},750);
+		$(this).find(".pic").transition({
+			rotateY:"0deg",
+			scale:1
+		},500);
+	});
 	
 })
 
