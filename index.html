@@ -18,9 +18,9 @@
 <script type="text/javascript" src="js/jquery.icheck.min.js"></script>
 <script type="text/javascript" src="js/jquery.fancybox.js"></script>
 
-<!-- <script type="text/javascript"
+<script type="text/javascript"
   src="https://maps.googleapis.com/maps/api/js?sensor=false">
-</script> -->
+</script>
 
 <script type="text/javascript" src="js/template-scripts.js"></script>
 
@@ -308,46 +308,28 @@
 				</div>
 			</div>
 			
-			<div class="block-features">
-				<div class="tabbed-content tabbed-content-fixed features-tabs">
-					<div class="tabs">
-						<div class="tab" rel="featureTargets"><span>Цели</span></div>
-						<div class="tab" rel="featureResults"><span>Результаты</span></div>
-						<div class="tab" rel="featureAuditory"><span>Аудитория</span></div>
-						<div class="tab" rel="featureAward"><span>Награда</span></div>
-					</div>
-					<div class="tabs-content">
-						<div class="tab-content tab-content-1" rel="featureTargets">
-							<div class="center-wrapper">
-								<div class="tab-pic">
-									<img src="files/tab-pic-1.png" />
-								</div>
-							</div>
+			<div class="block-report">
+				<div class="center-wrapper">
+					<div class="block-content clearfix">
+						
+						<div class="report-pic">
+							<img src="images/report-pic.png" />
 						</div>
-						<div class="tab-content tab-content-2" rel="featureResults">
-							<div class="center-wrapper">
-								<div class="tab-pic">
-									
-								</div>
-							</div>
+						
+						<div class="report-descr">
+							<h2>доклад о социальных инвестициях в россии 2014</h2>
+							<h3>к созданию ценности для бизнеса и общества</h3>
+							<ul>
+								<li>Основные тенденции в области корпоративной социальной ответственности и социальных инвестиций в период с 2009 по 2013 г.</li> 
+								<li>Обзор инновационных практик КСО ведущих российских компаний</li>
+								<li>Уникальная методика расчета количественного и качественного индекса социальных инвестиций российского бизнеса.</li>
+								<li>Экспертные рекомендации для представителей частных компаний и государственного сектора.</li>
+							</ul>
+							<a href="#" class="button button-2">Скачать доклад</a>
 						</div>
-						<div class="tab-content tab-content-3" rel="featureAuditory">
-							<div class="center-wrapper">
-								<div class="tab-pic">
-									
-								</div>
-							</div>
-						</div>
-						<div class="tab-content tab-content-4" rel="featureAward">
-							<div class="center-wrapper">
-								<div class="tab-pic">
-									 
-								</div>
-							</div>
-						</div>
+						
 					</div>
 				</div>
-				
 			</div>
 			
 			<div class="block-program">
@@ -1562,11 +1544,12 @@
 											</div>
 										</div>
 										<div class="form-checkboxes">
+											<input type="hidden" class="ch-hidden" name="register_hidden" />
 											<div class="form-item">
-												<label for="registration_agree1"><input type="checkbox" name="registration_agree1" id="registration_agree1"/>Получить заявку для участия в конкурсе корпоративных проектов</label>
+												<label for="register_agree_1"><input type="checkbox" name="register_agree_1" id="register_agree_1"/>Получить заявку для участия в конкурсе корпоративных проектов</label>
 											</div>
 											<div class="form-item">
-												<label for="registration_agree2"><input type="checkbox" name="registration_agree2" id="registration_agree2"/>Получить доклад о социальных инвестициях в России 2014</label>
+												<label for="register_agree_2"><input type="checkbox" name="register_agree_2" id="register_agree_2"/>Получить доклад о социальных инвестициях в России 2014</label>
 											</div>
 										</div>
 										<div class="form-footer">
@@ -1918,27 +1901,46 @@
 				</div>
 				
 				<div class="block-contacts">
-					<div class="center-wrapper">
-						<div class="block-content clearfix">
-							<div class="contacts-l">
-								<h2 class="block-ttl">Контакты оргкомитета проекта</h2>
+					<div class="block-content clearfix">
+						<div class="how-block-1">
+							<div class="center-wrapper">
+								<div class="clearfix">
+									<div class="contacts-l">
+										<h2 class="block-ttl">Контакты оргкомитета проекта</h2>
+									</div>
+									<div class="contacts-r">
+										<div class="contacts-item">
+											<div class="ico ico-phone"></div>
+											<h4>телефон/факс</h4>
+											<p>+7 (499) 271-34-41</p>
+										</div>
+										<div class="contacts-item">
+											<div class="ico ico-time"></div>
+											<h4>время работы оргкомитета</h4>
+											<p>с 10:00 до 19:00, ежедневно</p>
+										</div>
+										<div class="contacts-item">
+											<div class="ico ico-pin"></div>
+											<h4>адрес оргкомитета</h4>
+											<p>127473, Москва, ул. Делегатская, д. 7, стр. 1</p>
+											<div class="how-link"><span class="u-link-2">Как добраться</span></div>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="contacts-r">
-								<div class="contacts-item">
-									<div class="ico ico-phone"></div>
-									<h4>телефон/факс</h4>
-									<p>+7 (499) 271-34-41</p>
-								</div>
-								<div class="contacts-item">
-									<div class="ico ico-time"></div>
-									<h4>время работы оргкомитета</h4>
-									<p>с 10:00 до 19:00, ежедневно</p>
-								</div>
-								<div class="contacts-item">
-									<div class="ico ico-pin"></div>
-									<h4>адрес оргкомитета</h4>
-									<p>127473, Москва, ул. Делегатская, д. 7, стр. 1</p>
-									<div class="how-link"><span class="u-link-2">Как добраться</span></div>
+						</div>
+						<div class="how-block-2" style="display:none;">
+							<div class="close"></div>
+							<div class="clearfix">
+								<div class="how-block-2-map" id="howBlockMap"></div>
+								<div class="how-block-2-descr">
+									<div class="cont">
+										<h2>Как добраться</h2>
+										<h3>на общественном транспорте</h3>
+										<p>Пресненская набережная расположена на левом берегу Москвы-реки в Пресненском районе между Краснопресненской набережной и Тестовской улицей. Проходит вдоль делового центра Москва-Сити. Здесь расположена станция метро «Выставочная».</p>
+										<h3>На машине</h3>
+										<p>Пресненская набережная расположена на левом берегу Москвы-реки в Пресненском районе между Краснопресненской набережной и Тестовской улицей. Проходит вдоль делового центра Москва-Сити. Здесь расположена станция метро «Выставочная».</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -2055,40 +2057,41 @@
 			<form action=".">
 				<div class="form-row clearfix">
 					<div class="form-item form-item-2">
-						<label for="register_2name">Имя</label>
-						<input type="text" name="register_2name" id="register_2name" required />
+						<label for="register_2_name">Имя</label>
+						<input type="text" name="register_2_name" id="register_2_name" required />
 					</div>
 					<div class="form-item form-item-2">
-						<label for="register_2lastname">Фамилия</label>
-						<input type="text" name="register_2lastname" id="register_2lastname" required />
-					</div>
-				</div>
-				<div class="form-row clearfix">
-					<div class="form-item form-item-2">
-						<label for="register_2company">Компания</label>
-						<input type="text" name="register_2company" id="register_2company" required />
-					</div>
-					<div class="form-item form-item-2">
-						<label for="register_2post">Должность</label>
-						<input type="text" name="register_2post" id="register_2post" required />
+						<label for="register_2_lastname">Фамилия</label>
+						<input type="text" name="register_2_lastname" id="register_2_lastname" required />
 					</div>
 				</div>
 				<div class="form-row clearfix">
 					<div class="form-item form-item-2">
-						<label for="register_2email">Эл. почта</label>
-						<input type="text" class="email" name="register_2email" id="register_2email" required />
+						<label for="register_2_company">Компания</label>
+						<input type="text" name="register_2_company" id="register_2_company" required />
 					</div>
 					<div class="form-item form-item-2">
-						<label for="register_2phone">Телефон</label>
-						<input type="text" class="phone" name="register_2phone" id="register_2phone" required />
+						<label for="register_2_post">Должность</label>
+						<input type="text" name="register_2_post" id="register_2_post" required />
+					</div>
+				</div>
+				<div class="form-row clearfix">
+					<div class="form-item form-item-2">
+						<label for="register_2_email">Эл. почта</label>
+						<input type="text" class="email" name="register_2_email" id="register_2_email" required />
+					</div>
+					<div class="form-item form-item-2">
+						<label for="register_2_phone">Телефон</label>
+						<input type="text" class="phone" name="register_2_phone" id="register_2_phone" required />
 					</div>
 				</div>
 				<div class="form-checkboxes">
+					<input type="hidden" class="ch-hidden" name="register_2_hidden" />
 					<div class="form-item">
-						<label for="registration_agree1"><input type="checkbox" name="registration_agree1" id="registration_agree1"/>Получить заявку для участия в конкурсе корпоративных проектов</label>
+						<label for="register_2_agree_1"><input type="checkbox" name="register_2_agree_1" id="register_2_agree_1"/>Получить заявку для участия в конкурсе корпоративных проектов</label>
 					</div>
 					<div class="form-item">
-						<label for="registration_agree2"><input type="checkbox" name="registration_agree2" id="registration_agree2"/>Получить доклад о социальных инвестициях в России 2014</label>
+						<label for="register_2_agree_2"><input type="checkbox" name="register_2_agree_2" id="register_2_agree_2"/>Получить доклад о социальных инвестициях в России 2014</label>
 					</div>
 				</div>
 				<div class="form-footer">

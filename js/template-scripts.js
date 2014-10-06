@@ -20,7 +20,9 @@ $(window).scroll(function() {
 })
 
 $(document).ready(function() {
-  handleForms();
+  
+	handleForms();
+	
 	tabbedContent();
 	galleryTabs();
 	
@@ -29,7 +31,7 @@ $(document).ready(function() {
 	function initializeContactsMap() {
 		var mapOptions = {
 			zoom: 16,
-			center: new google.maps.LatLng(55.775876, 37.612067),
+			center: new google.maps.LatLng(55.778767, 37.59297),
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
 			disableDefaultUI: true,
 			scrollwheel: false
@@ -39,7 +41,7 @@ $(document).ready(function() {
 				mapOptions);
 				
 		var image = 'images/map-pin.png';
-		var myLatLng = new google.maps.LatLng(55.775876, 37.612067);
+		var myLatLng = new google.maps.LatLng(55.778767, 37.59297);
 		var beachMarker = new google.maps.Marker({
 				position: myLatLng,
 				map: map,
@@ -56,11 +58,41 @@ $(document).ready(function() {
 		}
 	})
 	
+	function initializeContactsMap2() {
+		var mapOptions = {
+			zoom: 16,
+			center: new google.maps.LatLng(55.775876, 37.612067),
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			disableDefaultUI: true,
+			scrollwheel: false
+		}
+		
+		var map = new google.maps.Map(document.getElementById("howBlockMap"),
+				mapOptions);
+				
+		var image = 'images/map-pin-2.png';
+		var myLatLng = new google.maps.LatLng(55.775876, 37.612067);
+		var beachMarker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				icon: image
+		});
+	}
+	
+	var mapInit2 = 0;
+	
 	$(".how-link").click(function() {
-		$(".tab[rel='contacts-2']").click();
-		$("html,body").animate({
-			scrollTop: $("a[name='contacts']").offset().top - 90
-		},1000)
+		$(".how-block-1").hide();
+		$(".how-block-2").fadeIn(250);
+		if (!mapInit) {
+			initializeContactsMap2();
+			mapInit2 = 1;
+		}
+	});
+	
+	$(".how-block-2 .close").click(function() {
+		$(".how-block-2").hide();
+		$(".how-block-1").fadeIn(250);
 	})
 	
 	$(".fancybox").fancybox({
@@ -133,7 +165,8 @@ $(document).ready(function() {
 	
 	$(".experts-item").on("mouseleave",function() {
 		$(this).find(".pic").transition({
-			rotateY:"0deg",
+			rotateY:"0deg"
+		},0).transition({
 			scale:1
 		},500)
 	});
@@ -155,7 +188,8 @@ $(document).ready(function() {
 			scale:1
 		},750);
 		$(this).find(".pic").transition({
-			rotateY:"0deg",
+			rotateY:"0deg"
+		},0).transition({
 			scale:1
 		},500)
 	});
@@ -175,7 +209,8 @@ $(document).ready(function() {
 			scale:1
 		},750);
 		$(this).find(".pic").transition({
-			rotateY:"0deg",
+			rotateY:"0deg"
+		},0).transition({
 			scale:1
 		},500);
 	});
@@ -191,6 +226,20 @@ function handleForms() {
   if ($("input:radio").length) {
     $("input:radio").iCheck()
   }
+	
+	$("input:checkbox").on('ifChecked', function(event){
+		var inputHidden = $(this).parents(".form-checkboxes").find(".ch-hidden")
+		if (inputHidden.length) {
+			inputHidden.val(inputHidden.val() + $(this).attr("id") + "-")
+		}
+	})
+	
+	$("input:checkbox").on('ifUnchecked', function(event){
+		var inputHidden = $(this).parents(".form-checkboxes").find(".ch-hidden")
+		if (inputHidden.length) {
+			inputHidden.val(inputHidden.val().replace($(this).attr("id")+"-",""))
+		}
+	})
 
   $("input[type=submit]").each(function() {
 		var submitEl = $(this);
@@ -220,6 +269,7 @@ function handleForms() {
 			$(this).find(".placeholder").show();
 		
     }
+		return false;
 	});
 	
 	$("input:text, input:password, textarea").each(function() {
@@ -267,7 +317,6 @@ function handleForms() {
     });
     
   });
-	
 	
 }
 
